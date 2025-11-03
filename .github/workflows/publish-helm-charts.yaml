@@ -57,7 +57,7 @@ jobs:
 
       - name: unit tests
         run: |
-          helm plugin install https://github.com/quintush/helm-unittest
+          helm plugin install https://github.com/helm-unittest/helm-unittest
           helm unittest . --strict --file "tests/**/*_test.yaml"
         working-directory: ${{ env.CHARTS_PATH }}/${{ matrix.chart }}
 
